@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     # 每日运行的时间，注意这里是零时区，北京时间需要时区换算，默认是凌晨6点
-    - cron: "0 22 * * *"
+    - cron: "0 1 * * *"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,4 +22,4 @@ jobs:
       - name: Fans Medal Step
         env:
           USERS: ${{secrets.USERS}}
-        run: python main.py --log-level ${{ vars.LOGGER_LEVEL || 'CRITICAL' }}
+        run: python main.py --log-level ${{ vars.LOGGER_LEVEL || 'INFO' }}
