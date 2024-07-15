@@ -9,8 +9,8 @@ from ..core import Provider
 
 class PushPlus(Provider):
     name = 'pushplus'
-    base_url = 'https://www.pushplus.plus/send'
-    site_url = 'https://www.pushplus.plus/doc'
+    base_url = 'http://www.pushplus.plus/send'
+    site_url = 'http://www.pushplus.plus/doc'
 
     _params = {
         'required': ['token', 'content'],
